@@ -71,7 +71,7 @@
     type="text/css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
-  
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
@@ -103,6 +103,16 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          bulmaCarousel.attach('#results-carousel2', {
+              slidesToScroll: 1,
+              slidesToShow: 1,  // Change this number to control how many slides are shown at once
+              infinite: true,
+              autoplay: false,
+          });
+      });
+  </script>
 
 </head>
 
@@ -128,7 +138,7 @@
             <span class="author-block"><sup>2</sup>Technical University of Darmstadt</span>
           </div> -->
 
-          
+
         </div>
       </div>
     </div>
@@ -188,7 +198,7 @@
               In this work, we introduce PianoMime, a framework for training a piano-playing agent using internet demonstrations.
             </p>
             <p>
-              The internet is a promising source of large-scale demonstrations for training our robot agents. 
+              The internet is a promising source of large-scale demonstrations for training our robot agents.
               In particular, for the case of piano-playing, Youtube is full of videos of professional pianists playing a wide myriad of songs.
             </p>
             <p>
@@ -480,6 +490,72 @@
       </div>
     </div>
   </section> -->
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Performance Visual Comparison</h2>
+          <div class="content has-text-justified">
+            <p>
+              To illustrate the robot's performance, we present a set of videos in which you can visualize the robot performing under a policy learned by our method (Pianomime) and trained under the baseline (RoboPianist).
+            </p>
+            <p>
+              While PianoMime framework exploits YouTube videos to learn the robot's behaviors from the human movements, RoboPianist relay on fingering strategies to assign different fingers to different keys.
+            </p>
+          </div>
+
+        </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel2" class="carousel results-carousel">
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="assets/videos/comparison/something_like_you_comparison.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="assets/videos/comparison/stan_comparison.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-shiba">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="assets/videos/comparison/love_me_again_comparison.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-fullbody">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="assets/videos/comparison/infinity_comparison.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-blueshirt">
+            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+              <source src="assets/videos/comparison/lost_comparison.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Put in middle -->
+    <div class="centered-text">
+      <h2>Left: RoboPianist (Baseline). Right: PianoMime (Ours)</h2>
+  </div>
+
+  </section>
 
 </body>
 
