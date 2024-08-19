@@ -113,6 +113,16 @@
           });
       });
   </script>
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          bulmaCarousel.attach('#results-carousel', {
+              slidesToScroll: 2,
+              slidesToShow: 2,  // Change this number to control how many slides are shown at once
+              infinite: true,
+              autoplay: false,
+          });
+      });
+  </script>
 
 </head>
 
@@ -187,216 +197,6 @@
     <h2>Common failure modes</h2>
   </section> -->
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              In this work, we introduce PianoMime, a framework for training a piano-playing agent using internet demonstrations.
-            </p>
-            <p>
-              The internet is a promising source of large-scale demonstrations for training our robot agents.
-              In particular, for the case of piano-playing, Youtube is full of videos of professional pianists playing a wide myriad of songs.
-            </p>
-            <p>
-              In our work, we leverage these demonstrations to train a generalist piano-playing agent capable of playing any arbitrary song.
-              Our framework is divided into three parts: a data preparation phase to extract the informative features from the Youtube videos,
-              a policy learning phase to train song-specific expert policies from the demonstrations and a policy distillation phase to distil the policies into a single generalist agent.
-              We explore different policy designs to represent the agent and evaluate the influence of the amount of training data on the agent's ability to generalize to novel songs not available in the dataset.
-              <!-- We show that we are able to learn a policy with up to 70% F1 score on unseen songs. -->
-            </p>
-          </div>
-        </div>
-      </div>
-      <!--/ Abstract. -->
-  </section>
-
-  <section class="hero is-light is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/single_task/Adieu.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-chair-tp">
-            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/single_task/ColdPlay.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-shiba">
-            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/single_task/Gimme.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/single_task/Happy.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-blueshirt">
-            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/single_task/IAmGood.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-mask">
-            <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/single_task/LaCalin.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-coffee">
-            <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/single_task/LoveMeAgain.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-toby">
-            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/single_task/SomethingJustLikeThis.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Put in middle -->
-    <div class="centered-text">
-      <h2>Results of Song-specific policies.</h2>
-  </div>
-
-  </section>
-  <section class="hero is-light is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_train/Adieu.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-chair-tp">
-            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_train/Coldplay.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-shiba">
-            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_train/Gimme.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_train/Happy.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-blueshirt">
-            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_train/IAmGood.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-mask">
-            <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_train/LaCalin.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-coffee">
-            <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_train/LoveMeAgain.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-toby">
-            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_train/SomethingJustLikeThis.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Put in middle -->
-    <div class="centered-text">
-      <h2>Results of the generalist policy on training dataset.</h2>
-  </div>
-
-  </section>
-  <section class="hero is-light is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_test/Alone.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-chair-tp">
-            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_test/Forester.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-shiba">
-            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_test/Hope.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_test/NoTimeToDie.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-blueshirt">
-            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_test/OhneDich.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-mask">
-            <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_test/Paradise.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-coffee">
-            <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_test/TheSpectre.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-toby">
-            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-              <source src="assets/videos/multi_task_test/Wednesday.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Put in middle -->
-    <div class="centered-text">
-      <h2>Results of the generalist policy on test dataset (unseen songs).</h2>
-  </div>
-
-  </section>
   <!-- <section>
     <h3>Multi Task Train</h3>
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1em">
@@ -491,6 +291,93 @@
     </div>
   </section> -->
 
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              In this work, we introduce PianoMime, a framework for training a piano-playing agent using internet demonstrations.
+            </p>
+            <p>
+              The internet is a promising source of large-scale demonstrations for training our robot agents.
+              In particular, for the case of piano-playing, Youtube is full of videos of professional pianists playing a wide myriad of songs.
+            </p>
+            <p>
+              In our work, we leverage these demonstrations to train a generalist piano-playing agent capable of playing any arbitrary song.
+              Our framework is divided into three parts: a data preparation phase to extract the informative features from the Youtube videos,
+              a policy learning phase to train song-specific expert policies from the demonstrations and a policy distillation phase to distil the policies into a single generalist agent.
+              We explore different policy designs to represent the agent and evaluate the influence of the amount of training data on the agent's ability to generalize to novel songs not available in the dataset.
+              <!-- We show that we are able to learn a policy with up to 70% F1 score on unseen songs. -->
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">From YouTube To Mujoco</h2>
+          <div class="content has-text-justified">
+            <p>
+              We aim to learn piano playing policies by imitating YouTube videos. Given a YouTube video of a human playing a song, we extract the human fingertip movement and the piano state and use this information to learn a reinforcement learning policy that imitates the human fingertip motion while guaranting the piano state is the one in the video.
+            </p>
+          </div>
+
+        </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel2" class="carousel results-carousel">
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="assets/videos/youtube_to_mujoco/Gimme_align.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="assets/videos/youtube_to_mujoco/IAmGood.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-shiba">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="assets/videos/youtube_to_mujoco/Adieu.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-fullbody">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="assets/videos/youtube_to_mujoco/ColdPlay.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-blueshirt">
+            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+              <source src="assets/videos/youtube_to_mujoco/SomethingJustLikeThis.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Put in middle -->
+  </section>
+
+
+
 
   <section class="section">
     <div class="container is-max-desktop">
@@ -554,8 +441,172 @@
     <div class="centered-text">
       <h2>Left: RoboPianist (Baseline). Right: PianoMime (Ours)</h2>
   </div>
-
   </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Generalist Policy via Distillation</h2>
+          <div class="content has-text-justified">
+            <p>
+              Given a set of YouTube videos, we learn multiple single song piano-playing experts via reinforcement learning.
+              Then, we apply Behavioral Cloning to learn a single piano playing policy that is able to play any song.
+            </p>
+          </div>
+
+        </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  </section>
+
+
+    <section class="hero is-light is-small">
+      <div class="hero-body">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-steve">
+              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_train/Adieu.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-chair-tp">
+              <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_train/Coldplay.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-shiba">
+              <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_train/Gimme.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-fullbody">
+              <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_train/Happy.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-blueshirt">
+              <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_train/IAmGood.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-mask">
+              <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_train/LaCalin.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-coffee">
+              <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_train/LoveMeAgain.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-toby">
+              <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_train/SomethingJustLikeThis.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Put in middle -->
+      <div class="centered-text">
+        <h2>Results of the generalist policy on training dataset.</h2>
+    </div>
+
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <!-- <h2 class="title is-3">Generalist Policy via Distillation</h2> -->
+            <div class="content has-text-justified">
+              <p>
+                The policy was tested on novel songs that were not available in the training dataset. We observed that the robot achieved an average of 0.57 F1 score in completely novel songs.
+              </p>
+            </div>
+
+          </div>
+          </div>
+        </div>
+        <!--/ Abstract. -->
+    </section>
+
+
+    <section class="hero is-light is-small">
+      <div class="hero-body">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-steve">
+              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_test/Alone.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-chair-tp">
+              <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_test/Forester.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-shiba">
+              <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_test/Hope.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-fullbody">
+              <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_test/NoTimeToDie.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-blueshirt">
+              <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_test/OhneDich.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-mask">
+              <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_test/Paradise.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-coffee">
+              <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_test/TheSpectre.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-toby">
+              <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+                <source src="assets/videos/multi_task_test/Wednesday.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Put in middle -->
+      <div class="centered-text">
+        <h2>Results of the generalist policy on test dataset (unseen songs).</h2>
+    </div>
+
+    </section>
+
 
 </body>
 
